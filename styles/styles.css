@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ENCABEZADOS */
+h1, h2, h3, h4, h5 {
+  color: #8B0000; 
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* NAVBAR */
+header img {
+  max-height: 50px;
+}
+
+/* BANNER */
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* PRODUCTOS */
+.card {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* BOTONES */
+.btn-danger {
+  background-color: #8B0000;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #a40000;
+}
+
+/* FORMULARIO DE CONTACTO */
+form label {
+  font-weight: 500;
+}
+
+form input, form textarea {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #fff;
+}
+
+footer h5 {
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+footer img {
+  margin-right: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
