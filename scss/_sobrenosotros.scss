@@ -1,0 +1,18 @@
+.sobrenosotros {
+  .row {
+    align-items: center;
+    gap: 2rem;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  p {
+    line-height: 1.6;
+    color: darken($color-texto, 5%);
+    margin-bottom: 1rem;
+  }
+}

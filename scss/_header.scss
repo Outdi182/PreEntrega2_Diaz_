@@ -1,0 +1,23 @@
+header {
+  background-color: $color-principal;
+  color: $color-secundario;
+  padding: $espaciado;
+
+  img {
+    max-height: 50px;
+  }
+
+  nav ul {
+    @include flex(row, center, 1rem);
+    list-style: none;
+
+    li a {
+      color: $color-secundario;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

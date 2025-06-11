@@ -1,0 +1,21 @@
+footer {
+  background-color: #222;
+  color: $color-secundario;
+  padding: 2rem;
+
+  h5 {
+    border-bottom: 1px solid #666;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    margin-right: 10px;
+  }
+
+  a {
+    color: $color-secundario;
+    &:hover {
+      color: lighten($color-principal, 20%);
+    }
+  }
+}

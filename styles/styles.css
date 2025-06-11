@@ -1,98 +1,191 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
-  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
 }
 
-/* ENCABEZADOS */
-h1, h2, h3, h4, h5 {
-  color: #8B0000; 
-  font-weight: 600;
-  margin-bottom: 1rem;
+header {
+  background-color: #8B0000;
+  color: #ffffff;
+  padding: 1.5rem;
 }
-
-/* NAVBAR */
 header img {
   max-height: 50px;
 }
+header nav ul {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
 
-/* BANNER */
+footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 2rem;
+}
+footer h5 {
+  border-bottom: 1px solid #666;
+  margin-bottom: 1rem;
+}
+footer img {
+  margin-right: 10px;
+}
+footer a {
+  color: #ffffff;
+}
+footer a:hover {
+  color: #f10000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card .card-title {
+  color: #333333;
+  font-weight: bold;
+}
+.card .card-text {
+  color: black;
+}
+
+.producto-hover {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.producto-hover img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+.producto-hover .descripcion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.88);
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  text-align: center;
+}
+.producto-hover:hover img {
+  opacity: 0.4;
+}
+.producto-hover:hover .descripcion {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 .banner img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-/* PRODUCTOS */
-.card {
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+.destacados {
+  text-align: center;
+}
+.destacados h2 {
+  color: #8B0000;
+  margin-bottom: 2rem;
 }
 
-.card:hover {
-  transform: scale(1.02);
+.contacto {
+  text-align: center;
 }
-
-.card-title {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.card-text {
-  color: #666;
-  font-size: 0.95rem;
-}
-
-/* BOTONES */
-.btn-danger {
-  background-color: #8B0000;
+.contacto iframe {
   border: none;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
 }
 
-.btn-danger:hover {
-  background-color: #a40000;
+.productos {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.productos .producto {
+  flex: 1 1 250px;
+  margin: 1rem;
+  text-align: center;
+}
+.productos .producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+.productos .producto h5 {
+  margin-top: 1rem;
+  color: #8B0000;
 }
 
-/* FORMULARIO DE CONTACTO */
-form label {
-  font-weight: 500;
+.sobrenosotros .row {
+  align-items: center;
+  gap: 2rem;
 }
-
-form input, form textarea {
+.sobrenosotros img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.sobrenosotros p {
+  line-height: 1.6;
+  color: rgb(38.25, 38.25, 38.25);
   margin-bottom: 1rem;
 }
 
-/* FOOTER */
-footer {
-  background-color: #222;
-  color: #fff;
+.compras {
+  text-align: center;
+}
+.compras p {
+  margin-bottom: 2rem;
+  color: rgb(38.25, 38.25, 38.25);
+}
+.compras .card {
+  transition: transform 0.2s ease;
+}
+.compras .card:hover {
+  transform: scale(1.03);
+}
+.compras .card .card-body h5 {
+  color: #8B0000;
+  font-weight: 600;
+}
+.compras .card .card-body .card-text {
+  color: #333333;
 }
 
-footer h5 {
-  border-bottom: 1px solid #666;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-footer img {
-  margin-right: 10px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.5rem;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,54 @@
+.card {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .card-title {
+    color: $color-texto;
+    font-weight: bold;
+  }
+
+  .card-text {
+    color: darken($color-texto, 20%);
+  }
+}
+
+.producto-hover {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .descripcion {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.88); // fondo semitransparente
+    color: #fff;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  &:hover img {
+    opacity: 0.4;
+  }
+
+  &:hover .descripcion {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,27 @@
+.compras {
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+    color: darken($color-texto, 5%);
+  }
+
+  .card {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    .card-body {
+      h5 {
+        color: $color-principal;
+        font-weight: 600;
+      }
+
+      .card-text {
+        color: $color-texto;
+      }
+    }
+  }
+}
